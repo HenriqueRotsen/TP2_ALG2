@@ -1,6 +1,7 @@
 import numpy as np
 import random
 from datetime import datetime
+from scipy.spatial import distance
 
 class Ponto:
   def __init__(self,x,y):
@@ -45,17 +46,39 @@ def geraPts(n):
             pVec.append(a)
   return pVec
 
-class MatrizAdj:
-    def __init__(self, n):
-        self.n = n
+class ListAdj:
+    def __init__(self, p):
+        self.p = p
 
-    def __repr__(self): 
-        return "(% s, % s, % s)" % (self.pontoEsquerdo, self.pontoDireito,self.chave)
+    def __distEuc__(self, p1): 
+      return distance.euclidean(self.p, p1)
+    
+    def __distMht__(self, p1): 
+      return distance.cityblock(self.p, p1)
+
+
+
+def criaMatriz(pts):
+  matAdj = [[]]
+  aux = []
+  for i in pts:
+    for j in pts:
+      aux.append(j)
+    matAdj.append(aux)
+    aux.clear()
+  return matAdj
 
 
 
 inicio = datetime.now()
-x = geraPts(1024)
+x = geraPts(2)
+mat = criaMatriz(x)
+print(mat)
 print(x)
+
+
+
+
+
 fim = datetime.now()
 print("\n\nTempo total gasto: ", fim - inicio)
