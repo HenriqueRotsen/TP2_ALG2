@@ -31,54 +31,52 @@ class Ponto:
     else:
       return False
 
+  def distEuc(self, other):
+    return distance.euclidean([self.x, self.y], [other.x, other.y])
 
-def geraPts(n):
+  def distMht(self, other):
+    return distance.cityblock([self.x, self.y], [other.x, other.y])
+
+def geraPts(num):
   pVec = []
-  for x in range(n):
+  x = 0
+  while x < num:
     m = random.randint(0, 2048)
     n = random.randint(0, 2048)
     
-    a = Ponto(m,n)
+    a = Ponto(m, n)
     if len(pVec) == 0:
         pVec.append(a)
     else:
-        if not(any(x == a for x in pVec)):
+        if not(any(k == a for k in pVec)):
             pVec.append(a)
+            x += 1
   return pVec
 
-class ListAdj:
-    def __init__(self, p):
-        self.p = p
-
-    def __distEuc__(self, p1): 
-      return distance.euclidean(self.p, p1)
-    
-    def __distMht__(self, p1): 
-      return distance.cityblock(self.p, p1)
-
-
-
 def criaMatriz(pts):
-  matAdj = [[]]
-  aux = []
-  for i in pts:
-    for j in pts:
-      aux.append(j)
-    matAdj.append(aux)
-    aux.clear()
-  return matAdj
-
-
+  num = len(pts)
+  matAdj = np.zeros((num,num),dtype=[('w', 'int'), ('x', 'int'), ('y', 'float'), ('z', 'int')])
+  
+  for x in range(num):    
+    for y in range(num):
+      if(x != y):
+        if[matAdj[x][y][0] == 0]:
+          dE = pts[x].distEuc(pts[y])
+          dM = pts[x].distMht(pts[y])
+          tupAux = (pts[y].x, pts[y].y, dE, dM)
+          tupAux2 = (pts[x].x, pts[x].y, dE, dM)
+          matAdj[x][y] = tupAux
+          matAdj[y][x] = tupAux2
+      else:
+        matAdj[x][y] = (pts[x].x, pts[x].y, 0, 0)
+  print(matAdj)
+        
 
 inicio = datetime.now()
-x = geraPts(2)
-mat = criaMatriz(x)
-print(mat)
-print(x)
+pts = geraPts(2**1)
+criaMatriz(pts)
 
-
-
-
-
+print("\n---------PONTOS---------\n")
+print(pts)
 fim = datetime.now()
 print("\n\nTempo total gasto: ", fim - inicio)
