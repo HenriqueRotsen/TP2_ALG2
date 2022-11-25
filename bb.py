@@ -8,6 +8,13 @@ import queue
 import igraph as ig
 
 
+import argparse
+
+parser = argparse.ArgumentParser(description='Number of instances: { 2 ^ N | 4 <= N <= 10, N ∊ Z} ')
+parser.add_argument('integer', metavar='N', type=int, nargs=1,
+                    help='an integer for the instance from 4 (four) to 10 (ten)')
+args = parser.parse_args()
+
 class Ponto:
   def __init__(self,x,y):
     self.x = x
