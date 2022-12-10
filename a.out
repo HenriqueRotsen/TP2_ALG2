@@ -1,0 +1,17 @@
+Algoritimo Twice Arround The Tree
+by Henrique Rotsen Santos Ferreira
+
+Tamanho da instancia: 2^4 [16]
+
+Caminho do caixeiro: [0, 2, 12, 3, 4, 6, 1, 15, 13, 7, 8, 14, 10, 9, 5, 11, 0]
+Distancia Euclideana: 17511.166105910976
+
+Caminho do caixeiro: [0, 2, 12, 3, 4, 6, 1, 15, 13, 7, 8, 14, 10, 9, 5, 11, 0]
+Distancia de Manhattan: 21875
+
+Diferenca entre as distancias: 4363.833894089024
+Diferenca entre as distancias em [%]: 24.920292958765277 %
+
+Tempo Total Gasto na Instancia 2^4 [16]:  0:00:00.005833
+
+----------------------------####################----------------------------

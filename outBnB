@@ -1,0 +1,17 @@
+Algoritimo Branch and Bound
+by Henrique Rotsen Santos Ferreira
+
+Tamanho da instancia: 2^4 [16]
+
+Caminho do caixeiro: [0, 13, 12, 1, 14, 3, 2, 15, 10, 8, 11, 5, 4, 6, 9, 7, 0]
+Distancia Euclideana: 7357.61663525276
+
+Caminho do caixeiro: [0, 13, 12, 1, 14, 3, 2, 15, 10, 8, 11, 5, 4, 6, 9, 7, 0]
+Distancia de Manhattan: 8864
+
+Diferenca entre as distancias: 1506.3833647472402
+Diferenca entre as distancias em [%]: 20.473795244096603 %
+
+Tempo Total Gasto na Instancia 2^4 [16]:  0:00:28.242742
+
+----------------------------####################----------------------------
