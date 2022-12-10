@@ -1,0 +1,17 @@
+Algoritimo de Christofides
+by Henrique Rotsen Santos Ferreira
+
+Tamanho da instancia: 2^5 [32]
+
+Caminho do caixeiro: [0, 17, 19, 22, 21, 28, 29, 26, 20, 25, 30, 7, 6, 8, 1, 2, 16, 12, 5, 3, 23, 18, 14, 24, 4, 31, 15, 10, 13, 9, 27, 11, 0]
+Distancia Euclideana: 31388.951099903505
+
+Caminho do caixeiro: [0, 17, 19, 22, 25, 20, 26, 29, 21, 28, 27, 11, 18, 14, 24, 4, 23, 5, 3, 12, 30, 7, 6, 8, 1, 2, 16, 31, 15, 10, 13, 9, 0]
+Distancia de Manhattan: 40057
+
+Diferenca entre as distancias: 8668.048900096495
+Diferenca entre as distancias em [%]: 27.614968313239174 %
+
+Tempo Total Gasto na Instancia 2^5 [32]:  0:00:00.079026
+
+----------------------------####################----------------------------

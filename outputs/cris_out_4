@@ -1,0 +1,17 @@
+Algoritimo de Christofides
+by Henrique Rotsen Santos Ferreira
+
+Tamanho da instancia: 2^4 [16]
+
+Caminho do caixeiro: [0, 8, 2, 3, 13, 10, 7, 6, 14, 11, 4, 15, 1, 12, 9, 5, 0]
+Distancia Euclideana: 17878.099960666903
+
+Caminho do caixeiro: [0, 8, 2, 3, 13, 10, 7, 6, 14, 5, 9, 1, 12, 4, 15, 11, 0]
+Distancia de Manhattan: 23014
+
+Diferenca entre as distancias: 5135.900039333097
+Diferenca entre as distancias em [%]: 28.727325893872635 %
+
+Tempo Total Gasto na Instancia 2^4 [16]:  0:00:00.013807
+
+----------------------------####################----------------------------
